@@ -3,8 +3,7 @@
 
 <html>
 
-  <body>
-  	
+  
     <s:iterator value="#request.ls" var="mylist">
     		<td> <s:property value="#mylist.ISBN"/> </td>
     		<a href="Information.action?id=<s:property value="#mylist.ISBN" />"><s:property value="#mylist.Title"/></a> 
