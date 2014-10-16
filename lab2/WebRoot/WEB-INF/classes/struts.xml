@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">  
+  
+  
+<struts>
+ <include file="struts-default.xml"/>
+ <constant name="struts.locale" value="zh_CN"/>
+ <constant name="struts.i18n.encoding" value="GBK"/>
+ <constant name="struts.action.excludePattern" value="/*.jsp"></constant>
+    <package name="fy" namespace="/" extends="struts-default">
+    	<default-action-ref name="indexAction"></default-action-ref>
+    		<action name="indexAction" class="tutorial.begin">
+    			<result name="success">login.jsp</result>
+    		</action>
+        <action name="login" class="tutorial.HelloWorld">
+            <result name="success">/success.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        
+        <action name="Information" class="tutorial.Information">
+            <result name="success">/ShowDetail.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        
+        <action name="Delete" class="tutorial.Delete">
+            <result name="success">/DeleteSuccess.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+    </package>
+
+</struts>
